@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Testando</title>
+</head>
+<body>
+    <form action="http://localhost:8000/camara/doc" method="get">
+        <section class="form">
+            <div class="form">
+                <div>
+                    <div class="form_radioBox_titulo">
+                        <h1>Selecione o tipo de ocorrencia</h1>
+                    </div>
+                    <div class="form_radioBox_topicos">
+                        <div class="form_radioBox">
+                            <h2>Agua e Esgoto</h2>
+                            <label for="aguaEsgotoDesobstrucao" class="formulario">Desobstrução da boca de lodo</label>
+                            <input type="radio" name="ocorr" value="aguaEsgoto_desobstrucao_da_boca_de_lodo">                        
+                            <label for="aguaEsgotoReparoTampaBocaLodo" class="formulario">Reparo da tampa de boca de lodo</label>
+                            <input type="radio" name="ocorr" value="aguaEsgoto_reparo_de_boca_de_lodo">
+                            <label for="aguaEsgotoReparoTampaPoco" class="formulario">Reparo da tampa de poço de visita</label>
+                            <input type="radio" name="ocorr" value="aguaEsgoto_reparo_de_poco_de_visita">
+                            <label for="aguaEsgotoReparoCanaletaOuValeta" class="formulario">Reparo de canaleta ou valeta</label>
+                            <input type="radio" name="ocorr" value="aguaEsgoto_reparo_caneleta_valeta">
+                            <label for="aguaEsgotoCessacaoDeVazamentoDeAguaOuEsgoto" class="formulario">Cessação de vazamento de àgua ou esgoto</label>
+                            <input type="radio" name="ocorr" value="aguaEsgoto_cessacao_de_vazamento_agua_ou_esgoto">
+                        </div>
+                        <div class="form_radioBox">
+                            <h2>Iluminação e Energia</h2>
+                            <label for="iluminacaoEnergia" class="formulario">Troca de lâmpada</label>
+                            <input type="radio" name="ocorr" value="iluminacaoEnergia_troca_de_lampada">
+                        </div>
+                        <div class="form_radioBox">
+                            <h2>Pavimentação</h2>
+                            <label for="pavimentacaoRecapeamento" class="formulario">Recapeamento</label>
+                            <input type="radio" name="ocorr" value="pavimentacao_recapeamento">
+                            <label for="pavimentacaoRecolocacaoDeParalelepipedos" class="formulario">Recolocação de Paralelepípedos</label>
+                            <input type="radio" name="ocorr" value="pavimentacao_recolocacao_de_paralelepipedos">
+                            <label for="pavimentacaoTapaBuraco" class="formulario">Tapa buraco</label>
+                            <input type="radio" name="ocorr" value="pavimentacao_tapa_buraco">
+                        </div>
+                        <div class="form_radioBox">
+                            <h2>Sinalização</h2>
+                            <label for="sinalizacaoPinturaPare" class="formulario">Pintura do "PARE" na horizontal</label>
+                            <input type="radio" name="ocorr" value="sinalizacao_pintura_pare">
+                        </div>
+                        <div class="form_radioBox">
+                            <h2>Zeladoria e Limpeza</h2>
+                            <label for="zeladoriaLimpezaLimpeza" class="formulario">Limpeza</label>
+                            <input type="radio" name="ocorr" value="zeladoriaLimpeza_limpeza">
+                            <label for="zeladoriaLimpezaRecolhimentoInserviveis" class="formulario">Recolhimento de Inservíveis</label>
+                            <input type="radio" name="ocorr" value="zeladoraiLimpeza_recolhimentoInserviveis">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_info">
+                    <p class="formulario">Digite a rua ou a avenida da ocorrencia.</p>
+                    <input type="text" name="ruaAvenida">
+                    <p class="formulario">Digite o Numero da casa mais proxima ao ocorrido.</p>
+                    <input type="text" name="numero">
+                    <p class="formulario">Digite o Bairro da ocorrencia.</p>
+                    <input type="text" name="bairro"> 
+                    <p class="formulario">Digite algum ponto de referencia</p>
+                    <input type="text" name="ruaRef">
+                    <input type="submit">
+                </div>    
+            </div>
+        </section>   
+    
+    </form>
+</body>
+</html>

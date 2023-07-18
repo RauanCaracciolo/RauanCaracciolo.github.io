@@ -1,0 +1,47 @@
+body{
+    background-color: #2b2d42;
+    color: white;
+    margin: auto;
+    font-size: 1em;
+}
+h1{
+    font-size: 150%;
+    padding: 2%;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.form_radioBox_topicos{
+    display: flex;
+    flex-direction: row;
+
+}
+.form_radioBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    border: 1px solid snow;
+    border-radius: 2%;
+    margin: 0.25%;
+    padding: 1%;
+}
+
+.form_info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+
+.formulario{
+    padding: 20px;
+    font-size: 20px;
+
+}

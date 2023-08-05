@@ -6,8 +6,6 @@ $(document).ready(function() {
       return $.ajax({
         url: "http://magosdeiliria.ddns.net:5000/ListarDocumentos", // Replace with your actual API endpoint
         method: "GET",
-        crossDomain: true,
-        dataType: 'jsonp',
         error: function(xhr, status, error) {
           console.error("Error fetching data:", error);
         }

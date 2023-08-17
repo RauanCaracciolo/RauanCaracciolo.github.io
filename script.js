@@ -28,52 +28,52 @@ var lista = [
   {
     "TipoServico": "ciclofaixa",
     "DescricaoServico": "Ciclofaixa",
-    "Categoria": "xxxx"
+    "Categoria": "transito"
   },
   {
     "TipoServico": "ciclovia",
     "DescricaoServico": "Ciclovia",
-    "Categoria": "xxxx"
+    "Categoria": "transito"
   },
   {
     "TipoServico": "ciclovia_ou_ciclofaixa",
     "DescricaoServico": "Ciclovia ou Ciclofaixa",
-    "Categoria": "xxxx"
+    "Categoria": "transito"
   },
   {
     "TipoServico": "desobstrucao_da_boca_de_lobo",
     "DescricaoServico": "Desobstrução da Boca de Lobo",
-    "Categoria": "xxxx"
+    "Categoria": "limpeza"
   },
   {
     "TipoServico": "lampada_incandescente_queimada",
     "DescricaoServico": "Lâmpada Incandescente Queimada",
-    "Categoria": "xxxx"
+    "Categoria": "iluminacao"
   },
   {
     "TipoServico": "lampada_LED_queimada",
     "DescricaoServico": "Lâmpada LED Queimada",
-    "Categoria": "xxxx"
+    "Categoria": "iluminacao"
   },
   {
     "TipoServico": "limpeza",
     "DescricaoServico": "Limpeza",
-    "Categoria": "xxxx"
+    "Categoria": "limpeza"
   },
   {
     "TipoServico": "lombada",
     "DescricaoServico": "Lombada",
-    "Categoria": "xxxx"
+    "Categoria": "transito"
   },
   {
     "TipoServico": "lombada_ou_lombofaixa",
     "DescricaoServico": "Lombada ou Lombofaixa",
-    "Categoria": "xxxx"
+    "Categoria": "transito"
   },
   {
     "TipoServico": "lombofaixa",
     "DescricaoServico": "Lombofaixa",
-    "Categoria": "xxxx"
+    "Categoria": "transito"
   },
   {
     "TipoServico": "plantio_de_arvore",
@@ -88,7 +88,7 @@ var lista = [
   {
     "TipoServico": "recapeamento",
     "DescricaoServico": "Recapeamento",
-    "Categoria": "xxxx"
+    "Categoria": "transito"
   },
   {
     "TipoServico": "recolhimento_de_inserviveis",
@@ -165,11 +165,31 @@ var lista = [
 
 function popularSelect(lista) {
   var select = document.getElementById("selectOptions");
+  var transito = document.getElementById("transito");
+  var limpeza = document.getElementById("limpeza");
+  var agua_esgoto = document.getElementById("agua_esgoto");
+  var iluminacao = document.getElementById("iluminacao");
   var texto = "";
   lista.forEach(element => {
-    texto += "<option value='"+ element.TipoServico +"'>"+ element.DescricaoServico +"</option>";
+    switch(element.Categoria) {
+      case "transito":
+        transito.innerHTML += "<option value='"+ element.TipoServico +"'>"+ element.DescricaoServico +"</option>";
+        break;
+      case "iluminacao":
+        iluminacao.innerHTML += "<option value='"+ element.TipoServico +"'>"+ element.DescricaoServico +"</option>";
+        break;
+      case "agua_esgoto":
+        agua_esgoto.innerHTML += "<option value='"+ element.TipoServico +"'>"+ element.DescricaoServico +"</option>";
+        break;
+      case "limpeza":
+        limpeza.innerHTML += "<option value='"+ element.TipoServico +"'>"+ element.DescricaoServico +"</option>";
+        break;
+      default:
+        break;
+    }
+    //texto += "<option value='"+ element.TipoServico +"'>"+ element.DescricaoServico +"</option>";
   });
-  select.innerHTML = texto
+  //select.innerHTML = texto
 }
 
 $(document).ready(popularSelect(lista));
